@@ -1,0 +1,448 @@
+<equipments>
+	<equipment name="Empty" />
+	<equipment name="Prisoner's Mask" type="hat" shadowy="1"/>
+	<equipment name="Modish Bonnet" type="hat" persuasive="2" scandal="1"/>
+	<equipment name="Sporing Bonnet" type="hat" watchful="-1" persuasive="2" nightmares="1"/>
+	<equipment name="Mask of the Rose" type="hat" persuasive="1"/>
+	<equipment name="Ridiculous Hat" type="hat" respectable="-1"/>
+	<equipment name="Unobtrusive Bowler Hat" type="hat" shadowy="2"/>
+	<equipment name="Fecund Amber Tiara" type="hat" persuasive="10" bizarre="1"/>
+	<equipment name="Tub of Gloam-Foam" type="hat" watchful="8" shadowy="4" dreaded="1"/>
+	<equipment name="Sinning Jenny's Forsaken Wimple!/Sinning Jenny's Forsaken Wimple" type="hat" watchful="1" persuasive="2"/>
+	<equipment name="Your Very Own Bandages" type="hat" persuasive="7" dreaded="1"/>
+	<equipment name="A Feathered Bonnet" type="hat" persuasive="4"/>
+	<equipment name="Judgemental Hat" type="hat" persuasive="8" bizarre="1"/>
+	<equipment name="Hellish Hymn" type="hat" watchful="7" dreaded="1"/>
+	<equipment name="Diabolical Fascinator" type="hat" dangerous="4"/>
+	<equipment name="A Subscription to the Gazette and a Whetted Pair of Scissors/Sebastian the Nocturnal Smotherer" type="hat" shadowy="4"/>
+	<equipment name="Corinthian Belfry Hat" type="hat" shadowy="8" bizarre="1"/>
+	<equipment name="Lemurian's Mask" type="hat" bizarre="1"/>
+	<equipment name="An Anonymous White Mask Zee-Stained and Mildewy" type="hat" shadowy="6" dreaded="2"/>
+	<equipment name="Song Stuck in Your Head" type="hat" nightmares="1"/>
+	<equipment name="Virginia's Spare Pillbox Hat/Apian Coronet" type="hat" dangerous="5" persuasive="5"/>
+	<equipment name="Tracklayer's Helmet" type="hat" dangerous="4" wounds="-1"/>
+	<equipment name="The Forsaken Crown of a Grand Devil" type="hat" watchful="4" dreaded="1" artisan="1"/>
+	<equipment name="F.F. Gebrandt's Patent Illuminating Cap" type="hat" watchful="8" shadowy="-2" anatomy="1"/>
+	<equipment name="'Surplus' Captain's Hat" type="hat" dangerous="6" dreaded="1" zeefaring="1"/>
+	<equipment name="Commander's Oneironautical Helm" type="hat" dangerous="5" bizarre="1" glasswork="1"/>
+	<equipment name="Diogenes" type="hat" persuasive="7" respectable="-2" bizarre="4" mithridacy="1"/>
+	<equipment name="Shattered Mask" type="hat" dangerous="5" dreaded="1"/>
+	<equipment name="Gant Bowler of Fiduciary Responsibility" type="hat" watchful="7" respectable="1"/>
+	<equipment name="Admiral's Hat" type="hat" persuasive="-3" respectable="1" zeefaring="1"/>
+	<equipment name="Aria of Tranquillity/Crab-Clawed Tricorne/Peaceable Cowl" type="hat" persuasive="5"/>
+	<equipment name="Carmine Escoffion" type="hat" persuasive="7" respectable="3" dreaded="-1"/>
+	<equipment name="Bundle of Ragged Clothing" type="clothing" persuasive="-1"/>
+	<equipment name="Bundle of Fourth City Rags" type="clothing" watchful="2"/>
+	<equipment name="Outfit of Black Felt Garments" type="clothing" shadowy="2"/>
+	<equipment name="Ratskin Suit" type="clothing" shadowy="6" persuasive="-1" dreaded="1"/>
+	<equipment name="Exquisite Ivory Gown" type="clothing" dangerous="-1" persuasive="10" respectable="1"/>
+	<equipment name="Sober Dress" type="clothing" suspicion="-1"/>
+	<equipment name="Academic Gown" type="clothing" watchful="5" dangerous="-1" respectable="1"/>
+	<equipment name="Bundle of Glad Rags" type="clothing" shadowy="-1" dangerous="-1" persuasive="2"/>
+	<equipment name="Neddy Suit" type="clothing" shadowy="3" dangerous="1" dreaded="1"/>
+	<equipment name="Far Khanate Lacquered Armour" type="clothing" dangerous="8" persuasive="4" bizarre="1"/>
+	<equipment name="Smock of 4308 Pockets" type="clothing" watchful="10"/>
+	<equipment name="Strange-Shore Parabola Frock" type="clothing" shadowy="5" persuasive="8" respectable="1" glasswork="1"/>
+	<equipment name="A Cured Jillyfleur Cloak" type="clothing" watchful="4" dangerous="6" persuasive="-1"/>
+	<equipment name="Barrel with Leather Shoulder-Straps" type="clothing" dangerous="4" scandal="1"/>
+	<equipment name="Viric Suit" type="clothing" bizarre="-3" glasswork="1"/>
+	<equipment name="Calliope the Yowler" type="clothing" persuasive="4" />
+	<equipment name="Aurochs-Fur Coat" type="clothing" shadowy="6" respectable="4" bizarre="-2" glasswork="1" nightmares="-1" />
+	<equipment name="Highwayman's Cloak" type="clothing" shadowy="6" respectable="-4" dreaded="2"/>
+	<equipment name="Velvet Cloak with Burning Buttons" type="clothing" shadowy="4" dreaded="1" artisan="1"/>
+	<equipment name="Pickpocket's Bane" type="clothing" shadowy="6" dangerous="3" bizarre="1"/>
+	<equipment name="Anning's Patent Ribcage Breastplate" type="clothing" dangerous="8" dreaded="1" anatomy="1"/>
+	<equipment name="Director's Commemorative Overcoat" type="clothing" persuasive="7" chess="1"/>
+	<equipment name="Reliable Labcoat" type="clothing" watchful="11" respectable="-2" bizarre="2" kataleptictoxicology="1"/>
+	<equipment name="Slaughtered Shell" type="clothing" bizarre="2" kataleptictoxicology="1" anatomy="1"/>
+	<equipment name="Sun-Blazoned Cuirass" type="clothing" dangerous="6" dreaded="1" wounds="-1"/>
+	<equipment name="Inconspicuous Overalls" type="clothing" watchful="2" respectable="1" suspicion="-1"/>
+	<equipment name="Burgundian Gown" type="clothing" persuasive="7" respectable="2" chthonosophy="1"/>
+	<equipment name="Pair of Neathglass Goggles" type="adornment" watchful="2"/>
+	<equipment name="Brass Ring" type="adornment" persuasive="5"/>
+	<equipment name="Semiotic Monocle" type="adornment" watchful="8" dangerous="5"/>
+	<equipment name="Twelve-Carat Diamond Ring" type="adornment" dangerous="3" persuasive="8"/>
+	<equipment name="Dilmun Club Lapel Badge" type="adornment" watchful="5" bizarre="1"/>
+	<equipment name="Pair of Irrigo Goggles" type="adornment" watchful="6" persuasive="-1"/>
+	<equipment name="Constant Cufflinks" type="adornment" shadowy="7" bizarre="1"/>
+	<equipment name="Bully Belvedere/Rostygold Ring" type="adornment" dangerous="4"/>
+	<equipment name="Antique Ring Worth Killing For" type="adornment" persuasive="4"/>
+	<equipment name="Viscount's Bejewelled Collar" type="adornment" persuasive="3" mithridacy="1"/>
+	<equipment name="Rusty Census-Taker's Badge" type="adornment" persuasive="8" respectable="2"/>
+	<equipment name="Misplaced Ring" type="adornment" persuasive="8" respectable="1" artisan="1"/>
+	<equipment name="Always-Returning Glim Earring" type="adornment" chthonosophy="1"/>
+	<equipment name="Whaletallow Taper" type="adornment" anatomy="1"/>
+	<equipment name="Venom-Ruby Lure" type="adornment" shadowy="-1" dangerous="1" persuasive="6"/>
+	<equipment name="Light-Drinking Cravat" type="adornment" shadowy="4" persuasive="-1" suspicion="-1"/>
+	<equipment name="Carnelian Sapphire Pendant" type="adornment" respectable="2" scandal="-1"/>
+	<equipment name="Unjustifiable Necktie" type="adornment" bizarre="2" scandal="1"/>
+	<equipment name="The Distinction of the Waking Fire" type="adornment" dangerous="5" dreaded="1" nightmares="-1"/>
+	<equipment name="Justificande Cufflinks/Mourning Locket/Rosegate Blend Roll-Ups" type="adornment" shadowy="8" respectable="1"/>
+	<equipment name="Pair of Iron Manacles" type="glove" />
+	<equipment name="Pair of Cracksman's Mittens" type="glove" shadowy="4" persuasive="-1"/>
+	<equipment name="Pair of Spiderchitin Gauntlets" type="glove" dangerous="5" persuasive="-1"/>
+	<equipment name="Pair of Lady's Lace Gloves" type="glove" dangerous="-1" persuasive="5"/>
+	<equipment name="Insatiable Gloves" type="glove" watchful="8" shadowy="-1" dangerous="2" persuasive="-1"/>
+	<equipment name="Pair of Lenguals/Gossamer Palms/Mournclimber's Wraps/Loomweavers" type="glove" shadowy="10" bizarre="1"/>
+	<equipment name="Chelatic Mitten" type="glove" watchful="7" bizarre="1"/>
+	<equipment name="An Ornate and Hefty Gothic Cross" type="glove" dangerous="1" respectable="1"/>
+	<equipment name="Flawless Hand Mirror" type="glove" watchful="3" shadowy="3" dangerous="3" persuasive="3"/>
+	<equipment name="Benvolio the Bacon Thief" type="glove" watchful="4" />
+	<equipment name="Tentacle Mitts" type="glove" shadowy="10" dreaded="-4" bizarre="2"/>
+	<equipment name="Sun-Seared Silken Glove" type="glove" respectable="2" chess="1"/>
+	<equipment name="Devil's Dictionary" type="glove" dreaded="1" glasswork="-2"/>
+	<equipment name="A Fierce Heart, Surgically Extracted" type="glove" dangerous="5"/>
+	<equipment name="Singed and Stained Work Gloves" type="glove" dangerous="8" bizarre="1" kataleptictoxicology="1"/>
+	<equipment name="The Flower from Hell that Grows Under Your Skin" type="glove" dreaded="1" artisan="1"/>
+	<equipment name="Stainless Gloves" type="glove" shadowy="3" dangerous="7"/>
+	<equipment name="Pugilist's Hello" type="glove" dangerous="5" respectable="2"/>
+	<equipment name="Keelgraspers" type="glove" dreaded="2" zeefaring="1"/>
+	<equipment name="Censor's Touch" type="glove" persuasive="8" dreaded="1" mithridacy="1"/>
+	<equipment name="Coilbreaker's Prints" type="glove" shadowy="6" glasswork="1"/>
+	<equipment name="Skyglass Knife/Rattus Faber Rifle" type="weapon" dangerous="2"/>
+	<equipment name="Nodule of Warm Amber" type="weapon" persuasive="2"/>
+	<equipment name="Ancient Hunting Rifle" type="weapon" shadowy="-1" dangerous="4"/>
+	<equipment name="Ravenglass Knife" type="weapon" dangerous="6" />
+	<equipment name="Set of Intricate Kifers" type="weapon" shadowy="7"/>
+	<equipment name="Patent Scrutinizer" type="weapon" watchful="4" dangerous="-1"/>
+	<equipment name="Patent Scrutinizer Deluxe!" type="weapon" watchful="7" dangerous="-1"/>
+	<equipment name="Prison Shiv" type="weapon" shadowy="1" dangerous="1"/>
+	<equipment name="Shepherd's Timepiece" type="weapon" shadowy="2"/>
+	<equipment name="Myriad Keys" type="weapon" watchful="4" shadowy="-4" dangerous="-2" persuasive="-4"/>
+	<equipment name="Bejewelled Cane" type="weapon" shadowy="-1" persuasive="4" nightmares="-1" bizarre="1"/>
+	<equipment name="Emergency Blunderbuss" type="weapon" dangerous="1" />
+	<equipment name="Consonant Violin" type="weapon" persuasive="4" respectable="1"/>
+	<equipment name="Iron Republic Journal" type="weapon" dreaded="1" bizarre="1"/>
+	<equipment name="Blooded Knife" type="weapon" dangerous="6" dreaded="1"/>
+	<equipment name="Key-to-Heart Dagger" type="weapon" dangerous="4" persuasive="1" />
+	<equipment name="Infernal Sharpshooter's Rifle" type="weapon" dangerous="10"/>
+	<equipment name="Nodule of Violet Amber" type="weapon" persuasive="3"/>
+	<equipment name="Vial of Cantigaster Venom" type="weapon" dangerous="12" kataleptictoxicology="1"/>
+	<equipment name="Consignment of Scintillack Snuff" type="weapon" shadowy="-1" dangerous="5" persuasive="3"/>
+	<equipment name="Mutersalt" type="weapon" watchful="-1" shadowy="2" dangerous="3"/>
+	<equipment name="Bloodstained Eolith" type="weapon" watchful="5" dangerous="4" persuasive="-1"/>
+	<equipment name="A Posy of the Neath's Finest Flowers/Amber Cello/Angelic Publications" type="weapon" persuasive="4"/>
+	<equipment name="A Journal of Metaphysical Conjecture" type="weapon" watchful="4"/>
+	<equipment name="A Boutonniere of Fresh Carnations" type="weapon" persuasive="5"/>
+	<equipment name="A Notable Absence of Scars/Cup of Dustwine/Implausible Beartrap" type="weapon" dangerous="4"/>
+	<equipment name="The Word of Caution" type="weapon" watchful="5" bizarre="1"/>
+	<equipment name="The Thief with Neither Face nor Name/Ace of Hats" type="weapon" shadowy="4"/>
+	<equipment name="Location of an Underground Organ" type="weapon" persuasive="10" bizarre="1" />
+	<equipment name="A Pre-Lapsarian Speaking Tube" type="weapon" shadowy="-1" persuasive="4"/>
+	<equipment name="The Seven-Fold Knock" type="weapon" dreaded="4"/>
+	<equipment name="Polythreme Drinking Vessel" type="weapon" persuasive="8" bizarre="1"/>
+	<equipment name="A Poisoned Pen" type="weapon" dangerous="8" dreaded="1"/>
+	<equipment name="Scrimshander Carving Knife" type="weapon" watchful="3" dangerous="-1" persuasive="2"/>
+	<equipment name="A Faceted Container of Drownie Effluvia" type="weapon" watchful="3" shadowy="5" dangerous="-1"/>
+	<equipment name="Unexploded Mine" type="weapon" persuasive="10" dreaded="1"/>
+	<equipment name="What Might Be A Thunderbolt" type="weapon" shadowy="10" bizarre="1"/>
+	<equipment name="The Seal of St Joshua" type="weapon" watchful="7" dreaded="1"/>
+	<equipment name="The DF" type="weapon" persuasive="7" dreaded="1"/>
+	<equipment name="The Contrarian's Monochromatic Lantern" type="weapon" watchful="8" bizarre="1"/>
+	<equipment name="Cricket Bat" type="weapon" dangerous="1" respectable="1"/>
+	<equipment name="A WORD, BROKEN" type="weapon" dangerous="-6" persuasive="-10" respectable="-3"/>
+	<equipment name="Cloven Seal" type="weapon" dangerous="3" bizarre="1"/>
+	<equipment name="Unblemished Exile's Rose" type="weapon" dreaded="1"/>
+	<equipment name="Plate of Scandalously-Buttered Scones" type="weapon" persuasive="5" respectable="1"/>
+	<equipment name="Nuncian Pocket Watch" type="weapon" shadowy="6" respectable="2"/>
+	<equipment name="Clandestine Candle" type="weapon" shadowy="5"/>
+	<equipment name="Selection of Garish Fireworks" type="weapon" shadowy="3" dangerous="5"/>
+	<equipment name="Shuttered Cake" type="weapon" persuasive="5" dreaded="1"/>
+	<equipment name="Freya, Scourge of Fragile Ornaments" type="weapon" watchful="2" dangerous="2" />
+	<equipment name="A Turnip?" type="weapon" respectable="-4" bizarre="1" shapelingarts="1"/>
+	<equipment name="A Book of Red Murder" type="weapon" dangerous="10" dreaded="2"/>
+	<equipment name="The Censored Census of 1862" type="weapon" watchful="2" dangerous="2" scandal="1" respectable="-3"/>
+	<equipment name="Sturdy Pick" type="weapon" shadowy="4" dangerous="7" respectable="-1" dreaded="1"/>
+	<equipment name="M. D' A for : F Edition" type="weapon" watchful="4" zeefaring="1"/>
+	<equipment name="Mostly-Cooperative Chart of the Eastern Unterzee" type="weapon" watchful="9" zeefaring="1"/>
+	<equipment name="Ratwork Pocket Piece" type="weapon" shadowy="4" dangerous="8"/>
+	<equipment name="Rat's-Head Cane" type="weapon" watchful="4" persuasive="8"/>
+	<equipment name="False-Star Catalogue" type="weapon" watchful="9" bizarre="1" glasswork="1"/>
+	<equipment name="Leviathan-Bone Knife" type="weapon" shadowy="8" dreaded="1" anatomy="1"/>
+	<equipment name="A Hungry Little Snuffbox" type="weapon" shadowy="9" respectable="1" artisan="1"/>
+	<equipment name="Weighty Postlapsarian Romance" type="weapon" watchful="5" persuasive="3" respectable="1"/>
+	<equipment name="Honest Butcher's Tool" type="weapon" dangerous="11" dreaded="1" kataleptictoxicology="1"/>
+	<equipment name="Mark of Disdain" type="weapon" shadowy="-5" dangerous="7" wounds="1"/>
+	<equipment name="The Black Book of Hearts" type="weapon" dangerous="10" kataleptictoxicology="1"/>
+	<equipment name="Huffam's Personal Blend" type="weapon" watchful="5" dreaded="1"/>
+	<equipment name="Palette of Revealing Pigments" type="weapon" shadowy="3" persuasive="5" respectable="1" chess="1"/>
+	<equipment name="Bag of Station VIII 'Humbugs'" type="weapon" persuasive="-4" dreaded="2" scandal="1"/>
+	<equipment name="Burgundian Breviary" type="weapon" watchfule="7" persuasive="7" bizarre="1" scandal="-1"/>
+	<equipment name="A Shard of Law-Glass" type="weapon" watchful="8" dangerous="6" artisan="1" nightmares="2"/>
+	<equipment name="Pair of Squeakless Boots" type="boot" shadowy="2"/>
+	<equipment name="Pair of Masterwork Dancing Slippers" type="boot" persuasive="5"/>
+	<equipment name="Pair of Ratskin Boots" type="boot" shadowy="6" persuasive="-1"/>
+	<equipment name="Pair of Vakeskin Boots" type="boot" shadowy="-1" dangerous="8"/>
+	<equipment name="Pair of Scarlet Stockings of Dubious Origin" type="boot" persuasive="2" scandal="1"/>
+	<equipment name="Pair of Kingscale Boots" type="boot" shadowy="8" dangerous="6" dreaded="1"/>
+	<equipment name="Meticulously Altered Stocking" type="boot" watchful="3"/>
+	<equipment name="Wax-Hardened Boots" type="boot" watchful="5" respectable="1"/>
+	<equipment name="Wrecking Boots" type="boot" shadowy="6" dangerous="4" persuasive="-1"/>
+	<equipment name="Defenestrating Boots" type="boot" dangerous="7" respectable="1"/>
+	<equipment name="The Place Where they Bury the Bodies" type="boot" shadowy="10" dreaded="1"/>
+	<equipment name="Language of Laces" type="wa7" dreaded="1"/>
+	<equipment name="Gustav the Ankle Weaver" type="boot" dangerous="4" />
+	<equipment name="Iguana-Skin Boots" type="boot" watchful="5" dreaded="1" bizarre="1" shapelingarts="1"/>
+	<equipment name="Pair of Balmoral Boots" type="boot" shadowy="-2" persuasive="-2" bizarre="1"/>
+	<equipment name="Completely Unassuming Paleontological Accessory" type="boot" dangerous="5" persuasive="5" respectable="1"/>
+	<equipment name="Infiltrator's Footsteps" type="boot" shadowy="8" dangerous="8" chess="1"/>
+	<equipment name="Venge-Rat Waders" type="boot" dangerous="7" bizarre="1" kataleptictoxicology="1"/>
+	<equipment name="Scrimshaw Sabatons/Bright-Buckled Boots/Riddlefisher's Footsteps" type="boot" watchful="5" mithridacy="1"/>
+	<equipment name="Pilgrim's Sandals" type="boot" watchful="7" chthonosophy="1"/>
+	<equipment name="Cephalopod Satchel" type="luggage" bizarre="1" chess="1"/>
+	<equipment name="Gentleman's Self-Similar Carryall" type="luggage" shadowy="6"/>
+	<equipment name="Leviathan-Leather Valise" type="luggage" zeefaring="1"/>
+	<equipment name="Slick Suitcase" type="luggage" respectable="1"/>
+	<equipment name="Indestructible Trunk" type="luggage" dreaded="1"/>
+	<equipment name="'Heirloom' Carpetbag" type="luggage" bizarre="1"/>
+	<equipment name="Shabti-Box" type="luggage" watchful="6"/>
+	<equipment name="Fairly Tame Sorrow-Spider" type="companion" dangerous="2" />
+	<equipment name="Dazed Raven Advisor" type="companion" watchful="2"/>
+	<equipment name="Disgraced Rattus Faber Bandit-Chief" type="companion" dangerous="5" persuasive="-1"/>
+	<equipment name="Tiny Cave Fish/Lucky Weasel/Sulky Bat/Bat with Attitude" type="companion"/>
+	<equipment name="Cheerful Goldfish" type="companion" nightmares="-1"/>
+	<equipment name="Araby Fighting-Weasel" type="companion" watchful="-1" dangerous="2"/>
+	<equipment name="Talkative Rattus Faber" type="companion" watchful="-25" shadowy="-25" dangerous="-25" persuasive="-25"/>
+	<equipment name="Bengal Tigress" type="companion" dangerous="7" persuasive="4" dreaded="1"/>
+	<equipment name="Salt Weasel" type="companion" persuasive="5" respectable="1"/>
+	<equipment name="Somnolent Hyaena" type="companion" watchful="-1"/>
+	<equipment name="Plated Seal" type="companion" shadowy="-1" dangerous="5" persuasive="-1"/>
+	<equipment name="Tomb-Lion" type="companion" dangerous="3" persuasive="-1"/>
+	<equipment name="Grubby Kitten" type="companion" dreaded="1"/>
+	<equipment name="Scuttering Squad" type="companion" watchful="8" shadowy="8" dangerous="8"/>
+	<equipment name="Unfinished Hat" type="companion" dangerous="3" dreaded="1" bizarre="1"/>
+	<equipment name="Dark-Carapaced Crustacean" type="companion" dangerous="3" bizarre="1"/>
+	<equipment name="Philosophical Raven Advisor" type="companion" watchful="6" persuasive="2"/>
+	<equipment name="Mystic Raven Advisor" type="companion" watchful="7" persuasive="2"/>
+	<equipment name="Devious Raven Advisor" type="companion" watchful="2" shadowy="7"/>
+	<equipment name="Pink-Painted Cat" type="companion" dangerous="4"/>
+	<equipment name="Presbyterate Diplomat" type="companion" watchful="6" persuasive="5"/>
+	<equipment name="Neurasthenic Assassin" type="companion" shadowy="2" dangerous="2"/>
+	<equipment name="Canny Costermonger/Curious Contrarian/Debonair Paleontologist" type="companion" watchful="2" persuasive="2"/>
+	<equipment name="Gilded Crustacean" type="companion" watchful="-1" dangerous="6" persuasive="1"/>
+	<equipment name="Midnight Matriarch" type="companion" watchful="8" shadowy="4" respectable="1"/>
+	<equipment name="Complaisant Frost-Moth" type="companion" watchful="2" dangerous="2"/>
+	<equipment name="Revolutionary Firebrand" type="companion" shadowy="4" persuasive="4"/>
+	<equipment name="Blemmigan Secretary" type="companion" dangerous="3" persuasive="6"/>
+	<equipment name="Ubergoat" type="companion" watchful="30" dreaded="2" bizarre="2"/>
+	<equipment name="Pentecost Ape" type="companion" watchful="5" dangerous="5" bizarre="1"/>
+	<equipment name="Affable Spy/A Ghostly Presence" type="companion" watchful="7" shadowy="5"/>
+	<equipment name="The Pirate-Poet/Impenitent Devil/Albino Rat" type="companion" dangerous="2" persuasive="2"/>
+	<equipment name="Parabolan Panther" type="companion" watchful="4" persuasive="7" bizarre="1" glasswork="1"/>
+	<equipment name="Parabolan Kitten" type="companion" persuasive="3" bizarre="1" glasswork="1"/>
+	<equipment name="The Cat's Chiefest Claw" type="companion" dangerous="5" persuasive="5" dreaded="1"/>
+	<equipment name="The Woman in Yellow" type="companion" watchful="4" shadowy="4"/>
+	<equipment name="Rubbery Bellringer" type="companion" persuasive="7" dreaded="1"/>
+	<equipment name="A Submerged Rector" type="companion" watchful="6" persuasive="7"/>
+	<equipment name="Rubbery Campanologist" type="companion" persuasive="8" dreaded="1" bizarre="1"/>
+	<equipment name="One Who Pulls the Strings" type="companion" shadowy="10" dreaded="1"/>
+	<equipment name="Ex-Privateer Charter Clerk" type="companion" watchful="4"/>
+	<equipment name="Newly-Born Frost-Moth" type="companion" persuasive="10" bizarre="1"/>
+	<equipment name="An Antediluvian Ushabti" type="companion" watchful="1" persuasive="1" bizarre="1" />
+	<equipment name="Sister Lydia" type="companion" shadowy="7" persuasive="5"/>
+	<equipment name="Enigmatic Augur" type="companion" watchful="2" shadowy="3"/>
+	<equipment name="The Chap on the Corner" type="companion" watchful="7" bizarre="1"/>
+	<equipment name="Unassuming Judge" type="companion" shadowy="7" respectable="1"/>
+	<equipment name="Minacious Union-Rat" type="companion" shadowy="5" dangerous="7"/>
+	<equipment name="Utterly Livid Bat" type="companion" dangerous="9" persuasive="-10"/>
+	<equipment name="The Minister of State Affairs" type="companion" watchful="10" respectable="1"/>
+	<equipment name="The Minister of Culture" type="companion" persuasive="10" respectable="1"/>
+	<equipment name="The Minister of Enigmas" type="companion" shadowy="10" bizarre="1"/>
+	<equipment name="The Minister of War" type="companion" dangerous="10" dreaded="1"/>
+	<equipment name="Blemmigan Tourist" type="companion" watchful="8" dangerous="3" bizarre="2"/>
+	<equipment name="Enthusiastic Visitor" type="companion" watchful="2" shadowy="2"/>
+	<equipment name="A Custom-Engraved Skull" type="companion" bizarre="1"/>
+	<equipment name="Regular Correspondence with an Incarcerate" type="companion" shadowy="5" dangerous="5" dreaded="1"/>
+	<equipment name="A Short-Tempered Shorthair" type="companion" dangerous="1" dreaded="1"/>
+	<equipment name="Wretched Mog" type="companion" shadowy="2" dangerous="3"/>
+	<equipment name="Senatorial Spider" type="companion" watchful="5" persuasive="7"/>
+	<equipment name="August Feline" type="companion" dangerous="8" persuasive="4"/>
+	<equipment name="Clay Curmudgeon" type="companion" watchful="3" dreaded="1"/>
+	<equipment name="Rubbery Feline" type="companion" shadowy="3" bizarre="1"/>
+	<equipment name="Morally and Physically Flexible Rubbery Cat" type="companion" shadowy="8" bizarre="2"/>
+	<equipment name="Sedulous Cryptanalyst" type="companion" watchful="6"/>
+	<equipment name="Ex-Privateer Illuminator" type="companion" watchful="5" shadowy="8"/>
+	<equipment name="Rubbery Herald" type="companion" watchful="3" persuasive="8" dreaded="1"/>
+	<equipment name="Nimble-Fingered Intelligencer" type="companion" watchful="6" dreaded="1" bizarre="1"/>
+	<equipment name="Consummate Wallflower" type="companion" watchful="6" respectable="1" bizarre="1"/>
+	<equipment name="Condolent Monkey" type="companion" watchful="5" persuasive="5" bizarre="1"/>
+	<equipment name="Seven-Throated Warbler" type="companion" persuasive="8"/>
+	<equipment name="A Bedraggles, Forlorn Fox" type="companion" watchful="9" />
+	<equipment name="Focused Albatross" type="companion" watchful="1" nightmares="1"/>
+	<equipment name="Dr Schlomo" type="companion" watchful="5" shadowy="5" respectable="1"/>
+	<equipment name="Horatio, Finest of His Lineage" type="companion" respectable="2" />
+	<equipment name="Untrained Lyrebird/Prismatic Squidling" type="companion" persuasive="3"/>
+	<equipment name="Operatic Lyrebird" type="companion" watchful="3" persuasive="5"/>
+	<equipment name="Lyrebird Educated in Three Schools" type="companion" watchful="5" persuasive="7" respectable="1"/>
+	<equipment name="Unquenchable Firebird" type="companion" watchful="5" persuasive="7" respectable="3" mithridacy="1"/>
+	<equipment name="Young Terror Bird/Untried Tracklayer/Unerring Elver" type="companion" dangerous="3"/>
+	<equipment name="Fully-Grown Terror Bird" type="companion" shadowy="3" dangerous="5"/>
+	<equipment name="Iron-Toothed Terror Bird" type="companion" shadowy="5" dangerous="7" dreaded="1"/>
+	<equipment name="Double-Headed Terror Bird" type="companion" shadowy="5" dangerous="7" dreaded="3" anatomy="1"/>
+	<equipment name="Aurochs" type="companion" shadowy="2"/>
+	<equipment name="Carnivorous Aurochs" type="companion" shadowy="5" dangerous="3"/>
+	<equipment name="Dream-Dwelling Carnivorous Aurochs" type="companion" shadowy="7" dangerous="5" dreaded="1"/>
+	<equipment name="Reflected Minotaur" type="companion" shadowy="7" dangerous="5" dreaded="1" bizarre="1" glasswork="1"/>
+	<equipment name="Amber Iguana" type="companion" watchful="5" persuasive="3"/>
+	<equipment name="Warm-hearted Amber Iguana" type="companion" watchful="7" persuasive="5" bizarre="1"/>
+	<equipment name="Rubbery Dragon" type="companion" watchful="7" persuasive="5" bizarre="3" shapelingarts="1"/>
+	<equipment name="Storm-bird" type="companion" watchful="2" nightmares="-1" dreaded="-2"/>
+	<equipment name="Honey-Mazed Bear" type="companion" dangerous="4" glasswork="1"/>
+	<equipment name="Possessed Goldfish" type="companion" respectable="-4" dreaded="-4" bizarre="-4"/>
+	<equipment name="Weasel of Social Discomfiture" type="companion" nightmares="-1" respectable="-12"/>
+	<equipment name="Forty-Nine-Voiced Warbler" type="companion" persuasive="8" dreaded="-12"/>
+	<equipment name="Viric Lizard" type="companion" bizarre="-12"/>
+	<equipment name="Ursine Honey Connoisseur" type="companion" respectable="1" glasswork="2"/>
+	<equipment name="Formerly Talkative Bearer of the Sausage About Which Nobody Complains" type="companion" watchful="7" dangerous="4" dreaded="2"/>
+	<equipment name="Cryptographic Chiropteran" type="companion" watchful="7" nightmares="-1" bizarre="1"/>
+	<equipment name="Buccaneering Paleontologist" type="companion" dangerous="10" bizarre="2"/>
+	<equipment name="Winged Creature of Considerable Speed" type="companion" watchful="6" dangerous="4" bizarre="3"/>
+	<equipment name="Portable Fingerking Moot" type="companion" persuasive="8" mithridacy="2"/>
+	<equipment name="Violant-Winged Bat" type="companion" watchful="5" bizarre="2" artisan="1"/>
+	<equipment name="Thoroughly Experienced Gondolier" type="companion" watchful="5" dangerous="7" bizarre="1"/>
+	<equipment name="Resourceful Dirigible Pilot" type="companion" watchful="7" persuasive="5" respectable="1"/>
+	<equipment name="Metaphysically Educated Rattus Faber" type="companion" persuasive="6"/>
+	<equipment name="Unburdened Imp" type="companion" respectable="-2" dreaded="2"/>
+	<equipment name="Quizzical Squirrel" type="companion" shadowy="3"/>
+	<equipment name="Acute Squirrel" type="companion" watchful="3" shadowy="5"/>
+	<equipment name="Acicular Squirrel" type="companion" watchful="5" shadowy="7" bizarre="1"/>
+	<equipment name="Transfixing Squirrel" type="companion" watchful="5" shadowy="7" dreaded="1" bizarre="2" kataleptictoxicology="1"/>
+	<equipment name="Spindlewolf/Suspicious Iguana" type="companion" watchful="3"/>
+	<equipment name="Enlongated Spindlewolf" type="companion" watchful="5" shadowy="3"/>
+	<equipment name="Surveilling Spindlewolf" type="companion" watchful="7" shadowy="5" respectable="1"/>
+	<equipment name="Brachiating Spindlewolf" type="companion" watchful="7" shadowy="5" respectable="2" bizarre="1" artisan="1"/>
+	<equipment name="Your very Own Miniature Hellworm/Haunted Goldfish" type="companion" dreaded="2"/>
+	<equipment name="Haunted Clydesdale" type="companion" persuasive="5" bizarre="1"/>
+	<equipment name="Rubbery Newcomer" type="companion" watchful="3" bizarre="1"/>
+	<equipment name="The Pirate-Poet Inscribed Anew" type="companion" persuasive="10" zeefaring="2"/>
+	<equipment name="Squirming Reprobate" type="companion" dangerous="7" bizarre="1" anatomy="1"/>
+	<equipment name="Stormy-Eyed Scoundrel" type="companion" watchful="10" shadowy="10" bizarre="3"/>
+	<equipment name="Recalcitrant Sculptress" type="companion" watchful="6" dreaded="3" anatomy="1" artisan="1"/>
+	<equipment name="Rodentine Panegyrist" type="companion" persuasive="10" respectable="2"/>
+	<equipment name="Cloistered Diatomist" type="companion" watchful="7" respectable="1"/>
+	<equipment name="Genre Painter" type="companion" watchful="8" persuasive="5" bizarre="1"/>
+	<equipment name="Abyssal Sawtooth" type="companion" dangerous="5" persuasive="3"/>
+	<equipment name="Immaculate Eel" type="companion" dangerous="7" persuasive="5" dreaded="1"/>
+	<equipment name="Uttermost Eel" type="companion" dangerous="7" persuasive="5" respectable="1" dreaded="1" bizarre="1" zeefaring="1"/>
+	<equipment name="Canny Cuttlefish" type="companion" dangerous="3" persuasive="5"/>
+	<equipment name="Violantly Mercantile Cuttlefish" type="companion" dangerous="5" persuasive="7" respectable="1"/>
+	<equipment name="Inculcating Kraken" type="companion" dangerous="5" persuasive="7" respectable="1" dreaded="1" bizarre="1" chess="1"/>
+	<equipment name="Exuberant Batling" type="companion" persuasive="3" />
+	<equipment name="Inquisitive Lamp-cat" type="companion" shadowy="6" dreaded="1" />
+	<equipment name="Weary Wayfinder" type="companion" shadowy="5"/>
+	<equipment name="Epistemological Mapmaker" type="companion" shadowy="7" respectable="1" mithridacy="1"/>
+	<equipment name="Navigator-Elect of the Sea of Spines" type="companion" shadowy="7" bizarre="1" shapelingarts="1"/>
+	<equipment name="Feline Pariah" type="companion" shadowy="10" dreaded="1" anatomy="2"/>
+	<equipment name="Reptilian Darling of the Beau Monde" type="companion" persuasive="8" respectable="2"/>
+	<equipment name="Verity" type="companion" dangerous="8" persuasive="5" dreaded="1"/>
+	<equipment name="Ivy" type="companion" watchful="5" persuasive="8" bizarre="1"/>
+	<equipment name="Almost-Tame Blue Prophet" type="companion" dangerous="3" dreaded="1" zeefaring="1"/>
+	<equipment name="Weasel of Woe" type="companion" watchful="-300" persuasive="-300" shadowy="-300" dangerous="-300" kataleptictoxicology="-10" anatomy="-10" chess="-10" shapelingarts="-10" artisan="-10" mithridacy="-10" zeefaring="-10" wounds="2"/>
+	<equipment name="Acerbic Clay Man" type="companion" shadowy="3" persuasive="3" />
+	<equipment name="Clay Corroborator" type="companion" shadowy="7" persuasive="3" bizarre="1" suspicion="-1"/>
+	<equipment name="Gravel-Voiced Gossip" type="sh3" persuasive="7" respectable="1" scandal="-1"/>
+	<equipment name="Silver-Eyed Scoundrel" type="companion" shadowy="6" glasswork="2"/>
+	<equipment name="The Eagle, Ascendant" type="companion" watchful="8" dangerous="5" artisan="2"/>
+	<equipment name="Verity of the Savage Lily" type="companion" dangerous="10" dreaded="1" kataleptictoxicology="1"/>
+	<equipment name="Ermine Assassin" type="companion" watchful="7" dangerous="4" dreaded="1"/>
+	<equipment name="The Newt" type="companion" shadowy="4" scandal="-1" nightmares="1"/>
+	<equipment name="Piebald Chronicler" type="companion" glasswork="1" mithridacy="1"/>
+	<equipment name="Codebreaking Courier" type="companion" watchful="5" shadowy="8" respectable="1"/>
+	<equipment name="Lovingly Be-Ribboned Kitten" type="companion" persuasive="3" bizarre="1"/>
+	<equipment name="Diptych Painter" type="companion" dangerous="8" bizarre="1" chthonosophy="1"/>
+	<equipment name="The Chromatographic Kinetoculus" type="companion" bizarre="2"/>
+	<equipment name="Stygian Colourist" type="companion" shadowy="6"/>
+	<equipment name="Violant Moon-Miser" type="companion" bizarre="1" shapelingarts="1"/>
+	<equipment name="Whispering Duellist" type="companion" shadowy="8" dreaded="1" chthonosophy="1"/>
+	<equipment name="Acquisitive Magpie Advisor" type="companion" watchful="8" shadowy="11" dreaded="1"/>
+	<equipment name="An Urchin with a Fondness for Cowls and Capes" type="companion" watchful="8" respectable="1" chthonosophy="1"/>
+	<equipment name="Your Daughter Returned" type="treasure" watchful="6" persuasive="13" respectable="4" kataleptictoxicology="2"/>
+	<equipment name="Pot of Violant Ink" type="tool" watchful="12" persuasive="12" artisan="1"/>
+	<equipment name="Membership of God's Editors" type="affiliation" persuasive="1" respectable="4"/>
+	<equipment name="Newspaper" type="affiliation" watchful="1" persuasive="1"/>
+	<equipment name="An Orphanage" type="affiliation" watchful="1" respectable="4"/>
+	<equipment name="Held in Esteem by the Crew of the Galatea" type="affiliation"/>
+	<equipment name="The Great Game" type="affiliation" watchful="5" shadowy="2"/>
+	<equipment name="A Member of the Order of Those Who Will Not Be Caught Red-Handed" type="affiliation" watchful="1" bizarre="1"/>
+	<equipment name="A Seat at the Bishop's Table" type="affiliation" persuasive="1" respectable="1"/>
+	<equipment name="A Member of the Crew of the St Elmo" type="affiliation" shadowy="1" dreaded="1"/>
+	<equipment name="Dream-Shadow of a Curator's Vestige" type="affiliation" watchful="6" shadowy="3" dreaded="1" glasswork="1"/>
+	<equipment name="The Rose Giveth Its Verses to Devils and Also to You" type="affiliation" watchful="2" dangerous="5" bizarre="1"/>
+	<equipment name="Lowell's Locks &amp; Cages" type="affiliation" shadowy="2" artisan="1"/>
+	<equipment name="A Preserver of London" type="affiliation" suspicion="-1" respectable="4" artisan="1"/>
+	<equipment name="Inducted into the Inverted Stalactite Society" type="affiliation" dangerous="1" bizarre="1"/>
+	<equipment name="Seven of St Eligius' Very Own Beard Hairs" type="affiliation" watchful="2" respectable="1" zeefaring="1"/>
+	<equipment name="Memory of a Miniature Museum" type="affiliation" dangerous="3" respectable="1" />
+	<equipment name="A Bronze Plaque Dedicated to Your Good Self" type="affiliation" persuasive="5" respectable="4" anatomy="1"/>
+	<equipment name="An Initiate into the Perfumer's Arts" type="affiliation" shadowy="5" dreaded="4" kataleptictoxicology="1"/>
+	<equipment name="Your Name in F.F. Gebrandt's Address Book" type="affiliation" watchful="5" bizarre="1" chess="1"/>
+	<equipment name="A Stalking Stone Shadow Beyond the Glass" type="affiliation" shadowy="4" dreaded="2" mithridacy="1"/>
+	<equipment name="A Reverie of Heroism" type="affiliation" persuasive="2" respectable="1" bizarre="1"/>
+	<equipment name="The Crew of the HMS Ramillies" type="affiliation" dangerous="4" dreaded="2" zeefaring="1"/>
+	<equipment name="Honorary Membership in the London Horticultural Society" type="affiliation" respectable="2" dreaded="-2" bizarre="2"/>
+	<equipment name="The Rank of Flight Captain" type="affiliation" dangerous="3" dreaded="3" anatomy="1"/>
+	<equipment name="The Final Resting Place of an Old Friend" type="affiliation" persuasive="5" mithridacy="1" nightmares="-1"/>
+	<equipment name="A Hard-Earned Knack for Repair" type="affiliation" watchful="5" respectable="2" scandal="-1"/>
+	<equipment name="A Silent Nod of Acknowledgement from Mr Hearts" type="affiliation" dangerous="4" suspicion="-1"/>
+	<equipment name="In Mr Huffam's Good Graces" type="affiliation" respectable="1" dreaded="1" scandal="-1"/>
+	<equipment name="An Absence" type="affiliation" />
+	<equipment name="Strange Aeronaut" type="affiliation" persuasive="5" nightmares="-1"/>
+	<equipment name="The Founding Principles of an Infernal Enclave" type="affiliation" dreaded="2" chthonosophy="1" nightmares="-2"/>
+	<equipment name="Velocipede" type="transport"/>
+	<equipment name="Clay Sedan Chair" type="transport" bizarre="2"/>
+	<equipment name="A Respectable Landau" type="transport" respectable="2"/>
+	<equipment name="Most Humbling Expression of Her Majesty's Esteem" type="transport" persuasive="8"/>
+	<equipment name="Semi-Automated Mary Lloyd" type="transport" dangerous="4" bizarre="3"/>
+	<equipment name="Augmented Electrostatic Machine" type="transport" dangerous="3" kataleptictoxicology="1"/>
+	<equipment name="Your Very Own Miniature Hellworm, Saddled and Bridled" type="transport" shadowy="-10" dangerous="10" respectable="-2" dreaded="6" kataleptictoxicology="1" />
+	<equipment name="Corpulent Carriage" type="transport" shadowy="3" bizarre="1" anatomy="1"/>
+	<equipment name="Weeping Litter-Cyst" type="transport" watchful="3" dreaded="1" bizarre="1" zeefaring="1"/>
+	<equipment name="Vagrant Oneirotaur" type="transport" shadowy="4" dangerous="2" glasswork="1"/>
+	<equipment name="Seven-League Spindlewolf" type="transport" watchful="4" shadowy="2" artisan="1"/>
+	<equipment name="Obstreperous Boar" type="transport" dangerous="4" dreaded="2"/>
+	<equipment name="Voluminous Library" type="homeComfort" watchful="3"/>
+	<equipment name="Formidable Basalt Gymnasium" type="homeComfort" dangerous="3"/>
+	<equipment name="Celestial Cinnabar Compass" type="homeComfort" watchful="6" />
+	<equipment name="The Very Teeth of St George" type="homeComfort" dangerous="4"/>
+	<equipment name="Beatific Stone" type="homeComfort" persuasive="8"/>
+	<equipment name="Oneiric Key" type="homeComfort" shadowy="8"/>
+	<equipment name="Lightfinger's Folly" type="homeComfort" shadowy="2" dangerous="2"/>
+	<equipment name="Portable Lamp-Post" type="homeComfort" watchful="2" respectable="2"/>
+	<equipment name="Relatively Plausible Curator Skeleton" type="homeComfort" dreaded="2" respectable="-2"/>
+	<equipment name="Regally Re-embodied Bird of Prey" type="homeComfort" persuasive="2" respectable="2" dreaded="-2"/>
+	<equipment name="Diorama of a Prehistoric Hunter" type="homeComfort" respectable="2" bizarre="-2"/>
+	<equipment name="Gear-driven Skeletal Monkey" type="homeComfort" respectable="-2" bizarre="2"/>
+	<equipment name="Anatomically Accurate Batrachian Bench" type="homeComfort" persuasive="2" dreaded="-2" bizarre="2"/>
+	<equipment name="Highly-Accurate Gargoyle" type="homeComfort" dangerous="4" bizarre="1" anatomy="1"/>
+	<equipment name="An Exemplary Work of Lapsarian Theological Art" type="homeComfort" watchful="1" persuasive="1" dreaded="-2"/>
+	<equipment name="Serpent-Headed Oneiropompic Stave" type="homeComfort" persuasive="6" bizarre="2" glasswork="2"/>
+	<equipment name="Rook-Crowned Oneiropompic Stave" type="homeComfort" shadowy="6" dreaded="2" glasswork="2"/>
+	<equipment name="Tiger-Furred Oneiropompic Stave" type="homeComfort" dangerous="6" respectable="2" glasswork="2"/>
+	<equipment name="A Portrait in the Bazaarine Style" type="homeComfort" persuasive="3" respectable="1" />
+	<equipment name="Amber Vision of the Sea of Spines" type="homeComfort" watchful="6" bizarre="1" shapelingarts="1" zeefaring="1"/>
+	<equipment name="Unopened Bottle of Broken Giant 1899 'Century Label'" type="homeComfort" persuasive="3" respectable="1"/>
+	<equipment name="Diatomist's Array" type="homeComfort" watchful="8" bizarre="1"/>
+	<equipment name="F.F. Gebrandt's Patent Neathoscope Containing and Displaying All Seven Colours of Exotic Light" type="homeComfort" watchful="7" persuasive="4" bizarre="2"/>
+	<equipment name="Naturalist's Map" type="homeComfort" watchful="4" respectable="-3" anatomy="1"/>
+	<equipment name="Clay Effigy" type="homeComfort" watchful="3" bizarre="1"/>
+	<equipment name="Memory of a Much Greater Self" type="homeComfort" watchful="5" mithridacy="1"/>
+	<equipment name="Ichorous Alarm" type="homeComfort" watchful="7" dreaded="1" wounds="-1"/>
+	<equipment name="Amber Ambassador's Seal" type="homeComfort" watchful="5" bizarre="2" shapelingarts="1" nightmares="-1"/>
+	<equipment name="At the Shore of Midnight 5th Edition" type="homeComfort" watchful="1" nightmares="1"/>
+	<equipment name="Heart-Caught Sapling" type="homeComfort" watchful="3" shadowy="3" dangerous="3" persuasive="3" dreaded="1"/>
+	<equipment name="Half-Devoured Heart" type="homeComfort" watchful="5" dreaded="2" chthonosophy="1"/>
+	<equipment name="Murgatroyd's Patented Fungal Christmas 'Tree'" type="homeComfort" shadowy="-4" bizarre="1" nightmares="-1"/>
+	<equipment name="Moth-Eaten Tapestry" type="homeComfort" respectable="1" mithridacy="1"/>
+	<equipment name="Rules for the Benthic Kriegsspiel 3rd Edition" type="homeComfort" watchful="8" chess="1"/>
+	<equipment name="A Fierce and Terrible Warmth" type="homeComfort" watchful="5" dreaded="2"/>
+	<equipment name="An Elephant That Is Yet to Be Refuted" type="homeComfort" shadowy="4" bizarre="2" nightmares="1"/>
+	<equipment name="Zeazoned Zailors" type="crew" dangerous="4"/>
+	<equipment name="A Conspiracy of Smugglers" type="crew" shadowy="4"/>
+	<equipment name="A Selection of Criminals, Scoundrels, Villains, and Ne'er-do-Wells" type="crew" dreaded="2"/>
+	<equipment name="A Crew Honoured For Services Beyond the Call of Valour" type="crew" watchful="4"/>
+	<equipment name="An Empire of Hands on Deck" type="crew" anatomy="1"/>
+	<equipment name="Rabble of Revellers" type="crew" persuasive="3"/>
+	<equipment name="Most Presentable Company" type="crew" respectable="2"/>
+	<equipment name="Staunch Comrades" type="crew" wounds="-1"/>
+	<equipment name="A Ragtag Gang of Outlaws" type="crew" artisan="1"/>
+</equipments>

@@ -1,0 +1,56 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="type">
+    <xs:restriction base="xs:string" >
+      <xs:enumeration value="hat"/>
+      <xs:enumeration value="clothing"/>
+      <xs:enumeration value="adornment"/>
+      <xs:enumeration value="glove"/>
+      <xs:enumeration value="weapon"/>
+      <xs:enumeration value="luggage"/>
+      <xs:enumeration value="companion"/>
+      <xs:enumeration value="affiliation"/>
+      <xs:enumeration value="transport"/>
+      <xs:enumeration value="crew"/>
+      <xs:enumeration value="homeComfort"/>
+      <xs:enumeration value="boot"/>
+      <xs:enumeration value="tool"/>
+      <xs:enumeration value="treasure"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="equipments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="equipment" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="name" use="optional"/>
+                <xs:attribute type="xs:string" name="type" use="optional"/>
+                <xs:attribute type="xs:integer" name="shadowy" use="optional"/>
+                <xs:attribute type="xs:integer" name="persuasive" use="optional"/>
+                <xs:attribute type="xs:integer" name="scandal" use="optional"/>
+                <xs:attribute type="xs:integer" name="watchful" use="optional"/>
+                <xs:attribute type="xs:integer" name="nightmares" use="optional"/>
+                <xs:attribute type="xs:integer" name="respectable" use="optional"/>
+                <xs:attribute type="xs:integer" name="bizarre" use="optional"/>
+                <xs:attribute type="xs:integer" name="dreaded" use="optional"/>
+                <xs:attribute type="xs:integer" name="dangerous" use="optional"/>
+                <xs:attribute type="xs:integer" name="wounds" use="optional"/>
+                <xs:attribute type="xs:integer" name="artisan" use="optional"/>
+                <xs:attribute type="xs:integer" name="anatomy" use="optional"/>
+                <xs:attribute type="xs:integer" name="zeefaring" use="optional"/>
+                <xs:attribute type="xs:integer" name="glasswork" use="optional"/>
+                <xs:attribute type="xs:integer" name="mithridacy" use="optional"/>
+                <xs:attribute type="xs:integer" name="suspicion" use="optional"/>
+                <xs:attribute type="xs:integer" name="chess" use="optional"/>
+                <xs:attribute type="xs:integer" name="kataleptictoxicology" use="optional"/>
+                <xs:attribute type="xs:integer" name="chthonosophy" use="optional"/>
+                <xs:attribute type="xs:integer" name="shapelingarts" use="optional"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,6 +1,7 @@
 import itertools
 import re
 from lxml import etree
+import operator
 
 innateBizarre = 0
 innateDreaded = 2+2+4
@@ -42,16 +43,34 @@ def statIs(equipment, stat):
                 'zeefaring':innateZeefaring,'chthonosophy':innateCthonosophy, 'wounds':0,'suspicion':0,'scandal':0,'nightmares':0}[stat]
     return int(equipment.get(stat,default=0))
 
-def filterOut(slot, filterBy, sortBy, mode='maximum'):
+def skylineBest(things, attributes, comparisons):
+    maximals=[]
+    while things:
+        currMaximal = things.pop(0)
+        pos = 0
+        for i in things:
+            if all([comparisons[j](statIs(currMaximal,attributes[j]),statIs(i,attributes[j])) for j in range(0,len(attributes))]):
+                things.remove(i)
+            elif all([comparisons[j](statIs(i,attributes[j]),statIs(currMaximal,attributes[j])) for j in range(0,len(attributes))]):
+                currMaximal = i
+                pos = things.index(i)
+                things.remove(i)
+        maximals+=[currMaximal]
+        for i in things[0:pos]:
+            if all([comparisons[j](statIs(currMaximal,attributes[j]),statIs(i,attributes[j])) for j in range(0,len(attributes))]):
+                things.remove(i)
+    return maximals
+
+def filterOut(slot, filterBy, directions, sortBy, mode='maximum'):
     filterVals = []
     for i in slot:
         if [statIs(i, j) for j in filterBy] not in filterVals:
             filterVals.append([statIs(i, j) for j in filterBy])
     if mode=='maximum':
-        slot2 = [max([i for i in slot if [statIs(i, k) for k in filterBy]==j], key=lambda i: statIs(i, sortBy)) for j in filterVals]
+        slotPartFiltered = [max([i for i in slot if [statIs(i, k) for k in filterBy]==j], key=lambda i: statIs(i, sortBy)) for j in filterVals]
     elif mode=='minimum':
-        slot2 = [min([i for i in slot if [statIs(i, k) for k in filterBy]==j], key=lambda i: statIs(i, sortBy)) for j in filterVals]
-    return slot2
+        slotPartFiltered = [min([i for i in slot if [statIs(i, k) for k in filterBy]==j], key=lambda i: statIs(i, sortBy)) for j in filterVals]
+    return skylineBest(slotPartFiltered, filterBy+[sortBy], [{'>':operator.ge, '<':operator.le, '==':lambda x, y: False}[i] for i in directions]+[{'maximum':operator.ge, 'minimum':operator.le}[mode]])
 
 #subjectTo of the form ['statVal["respectable"]>=7', 'statVal["bizarre"]==0']
 def optimise(stat, subjectTo, mode='maximum'):
@@ -110,7 +129,7 @@ def optimise(stat, subjectTo, mode='maximum'):
                     break
     equipments = [hats, clothings, adornments, gloves, weapons, boots, luggages, companions, treasures, tools, affiliations, transports, homeComforts, crews]
     for i in range(0,len(equipments)):
-        equipments[i]=filterOut(equipments[i], relevantStats[1:], stat, mode=mode)
+        equipments[i]=filterOut(equipments[i], relevantStats[1:], lookingFor[1:], stat, mode=mode)
     outfits=[i for i in itertools.product(*equipments)]
     print(len(outfits))
     for fit in outfits:

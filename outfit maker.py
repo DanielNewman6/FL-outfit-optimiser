@@ -2,6 +2,9 @@ import itertools
 import re
 from lxml import etree
 import operator
+from math import prod
+import tqdm
+import time
 
 innateBizarre = 0
 innateDreaded = 2+2+4
@@ -62,6 +65,7 @@ def skylineBest(things, attributes, comparisons):
     return maximals
 
 def filterOut(slot, filterBy, directions, sortBy, mode='maximum'):
+    global filter1counts
     filterVals = []
     for i in slot:
         if [statIs(i, j) for j in filterBy] not in filterVals:
@@ -70,6 +74,7 @@ def filterOut(slot, filterBy, directions, sortBy, mode='maximum'):
         slotPartFiltered = [max([i for i in slot if [statIs(i, k) for k in filterBy]==j], key=lambda i: statIs(i, sortBy)) for j in filterVals]
     elif mode=='minimum':
         slotPartFiltered = [min([i for i in slot if [statIs(i, k) for k in filterBy]==j], key=lambda i: statIs(i, sortBy)) for j in filterVals]
+    filter1counts+=[len(slotPartFiltered)]
     return skylineBest(slotPartFiltered, filterBy+[sortBy], [{'>':operator.ge, '<':operator.le, '==':lambda x, y: False}[i] for i in directions]+[{'maximum':operator.ge, 'minimum':operator.le}[mode]])
 
 #subjectTo of the form ['statVal["respectable"]>=7', 'statVal["bizarre"]==0']
@@ -90,6 +95,7 @@ def optimise(stat, subjectTo, mode='maximum'):
     global statVal
     global luggages
     global equipments
+    global filter1counts
     relevantStats = [stat]
     for i in subjectTo:
         relevantStats.append(statText(i))
@@ -128,11 +134,17 @@ def optimise(stat, subjectTo, mode='maximum'):
                     typeAppend(equipment)
                     break
     equipments = [hats, clothings, adornments, gloves, weapons, boots, luggages, companions, treasures, tools, affiliations, transports, homeComforts, crews]
+    print('Naive search:      '+str(prod([len(i) for i in equipments])))
+    filter1counts=[]
     for i in range(0,len(equipments)):
         equipments[i]=filterOut(equipments[i], relevantStats[1:], lookingFor[1:], stat, mode=mode)
-    outfits=[i for i in itertools.product(*equipments)]
-    print(len(outfits))
-    for fit in outfits:
+    print('After first pass:  '+str(prod(filter1counts)))
+    print('After second pass: '+str(prod([len(i) for i in equipments])))
+    st=time.time()
+    outfits=itertools.product(*equipments)
+    en=time.time()
+    print('Building outfit list: '+str(en-st))
+    for fit in tqdm.gui.tqdm(outfits,total=prod([len(i) for i in equipments])):
         statVal={}
         for i in relevantStats:
             statVal[i] = sum([statIs(j, i) for j in fit])+statIs('innate', i)

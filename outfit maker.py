@@ -6,22 +6,60 @@ from math import prod
 import tqdm
 import time
 
-innateBizarre = 0
-innateDreaded = 2+2+4
-innateRespectable = 0
-innateMithridacy = 7
-innateArtisan = 7
-innateGlasswork = 7
-innateChess = 7
-innateAnatomy = 7
-innateToxicology = 7+1
-innateShapeling = 7
-innateZeefaring = 7
-innateCthonosophy = 6
-innateWatchful = 30
-innateDangerous = 36+1+5
-innateShadowy = 30+5
-innatePersuasive = 30
+def setup(person='player'):
+    global innateBizarre
+    global innateDreaded
+    global innateRespectable
+    global innateMithridacy
+    global innateArtisan
+    global innateGlasswork
+    global innateChess
+    global innateAnatomy
+    global innateToxicology
+    global innateShapeling
+    global innateZeefaring
+    global innateChthonosophy
+    global innateWatchful
+    global innateDangerous
+    global innateShadowy
+    global innatePersuasive
+    if person=='player':
+        innateBizarre = 0
+        innateDreaded = 2+2+4
+        innateRespectable = 0
+        innateMithridacy = 7
+        innateArtisan = 7
+        innateGlasswork = 7
+        innateChess = 7
+        innateAnatomy = 7
+        innateToxicology = 7+1
+        innateShapeling = 7
+        innateZeefaring = 7
+        innateCthonosophy = 6
+        innateWatchful = 230
+        innateDangerous = 236+1+5
+        innateShadowy = 230+5
+        innatePersuasive = 230
+    elif person=='captain':
+        innateWatchful=50
+        innateDangerous=50
+        innateZeefaring=3
+    elif person=='breaker':
+        innateWatchful=50
+        innateDangerous=70
+        innateZeefaring=1
+    elif person=='bathyphile':
+        innateWatchful=50
+        innateShadowy=50
+        innateDangerous=20
+        innateZeefaring=5
+    elif person=='mondaine':
+        innateShadowy=50
+        innatePersuasive=50
+    elif person=='mole':
+        innateShadowy=70
+        innatePersuasive=30
+        innateChess=1
 
 equipmentFile = etree.parse('equipmentFile.xml')
 
@@ -78,7 +116,7 @@ def filterOut(slot, filterBy, directions, sortBy, mode='maximum'):
     return skylineBest(slotPartFiltered, filterBy+[sortBy], [{'>':operator.ge, '<':operator.le, '==':lambda x, y: False}[i] for i in directions]+[{'maximum':operator.ge, 'minimum':operator.le}[mode]])
 
 #subjectTo of the form ['statVal["respectable"]>=7', 'statVal["bizarre"]==0']
-def optimise(stat, subjectTo, mode='maximum'):
+def optimise(stat, subjectTo, mode='maximum', agent=False):
     global hats
     global clothings
     global gloves
@@ -119,20 +157,36 @@ def optimise(stat, subjectTo, mode='maximum'):
     adornments=equipmentFile.findall('.//equipment[@name="Empty"]')
     crews=equipmentFile.findall('.//equipment[@name="Empty"]')
     luggages=equipmentFile.findall('.//equipment[@name="Empty"]')
-    for equipment in equipmentFile.findall('.//equipment[@type]'):
-        for r in range(0, len(relevantStats)):
-            if lookingFor[r]=='<':
-                if statIs(equipment, relevantStats[r])<0:
-                    typeAppend(equipment)
-                    break
-            elif lookingFor[r]=='>':
-                if statIs(equipment, relevantStats[r])>0:
-                    typeAppend(equipment)
-                    break
-            elif lookingFor[r]=='==':
-                if statIs(equipment, relevantStats[r])!=0:
-                    typeAppend(equipment)
-                    break
+    if not agent:
+        for equipment in equipmentFile.findall('.//equipment[@type]'):
+            for r in range(0, len(relevantStats)):
+                if lookingFor[r]=='<':
+                    if statIs(equipment, relevantStats[r])<0:
+                        typeAppend(equipment)
+                        break
+                elif lookingFor[r]=='>':
+                    if statIs(equipment, relevantStats[r])>0:
+                        typeAppend(equipment)
+                        break
+                elif lookingFor[r]=='==':
+                    if statIs(equipment, relevantStats[r])!=0:
+                        typeAppend(equipment)
+                        break
+    else:
+        for equipment in equipmentFile.xpath('.//equipment[@type!="tool" and @type!="treasure" and @agentAvail="true"]'):
+            for r in range(0, len(relevantStats)):
+                if lookingFor[r]=='<':
+                    if statIs(equipment, relevantStats[r])<0:
+                        typeAppend(equipment)
+                        break
+                elif lookingFor[r]=='>':
+                    if statIs(equipment, relevantStats[r])>0:
+                        typeAppend(equipment)
+                        break
+                elif lookingFor[r]=='==':
+                    if statIs(equipment, relevantStats[r])!=0:
+                        typeAppend(equipment)
+                        break
     equipments = [hats, clothings, adornments, gloves, weapons, boots, luggages, companions, treasures, tools, affiliations, transports, homeComforts, crews]
     print('Naive search:      '+str(prod([len(i) for i in equipments])))
     filter1counts=[]

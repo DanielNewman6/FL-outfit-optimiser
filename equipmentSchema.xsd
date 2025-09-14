@@ -1,5 +1,5 @@
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:simpleType name="type">
+  <xs:simpleType name="equiptype">
     <xs:restriction base="xs:string" >
       <xs:enumeration value="hat"/>
       <xs:enumeration value="clothing"/>
@@ -25,7 +25,7 @@
             <xs:simpleContent>
               <xs:extension base="xs:string">
                 <xs:attribute type="xs:string" name="name" use="optional"/>
-                <xs:attribute type="xs:string" name="type" use="optional"/>
+                <xs:attribute type="equiptype" name="type" use="optional"/>
                 <xs:attribute type="xs:integer" name="shadowy" use="optional"/>
                 <xs:attribute type="xs:integer" name="persuasive" use="optional"/>
                 <xs:attribute type="xs:integer" name="scandal" use="optional"/>
@@ -46,6 +46,10 @@
                 <xs:attribute type="xs:integer" name="kataleptictoxicology" use="optional"/>
                 <xs:attribute type="xs:integer" name="chthonosophy" use="optional"/>
                 <xs:attribute type="xs:integer" name="shapelingarts" use="optional"/>
+                <xs:attribute type="xs:integer" name="neathproofed" use="optional"/>
+                <xs:attribute type="xs:integer" name="inerrant" use="optional"/>
+                <xs:attribute type="xs:integer" name="insubstantial" use="optional"/>
+                <xs:attribute type="xs:boolean" name="agentAvail" use="optional"/>
               </xs:extension>
             </xs:simpleContent>
           </xs:complexType>

@@ -6,7 +6,7 @@ from math import prod
 import tqdm
 import time
 
-def setup(person='player'):
+def setup(person='Player'):
     global innateBizarre
     global innateDreaded
     global innateRespectable
@@ -23,7 +23,8 @@ def setup(person='player'):
     global innateDangerous
     global innateShadowy
     global innatePersuasive
-    if person=='player':
+    innateBizarre, innateDreaded, innateRespectable, innateMithridacy, innateArtisan, innateGlasswork, innateChess, innateAnatomy, innateToxicology, innateShapeling, innateZeefaring, innateChthonosophy, innateWatchful, innateDangerous, innateShadowy, innatePersuasive = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    if person=='Player':
         innateBizarre = 0
         innateDreaded = 2+2+4
         innateRespectable = 0
@@ -35,28 +36,28 @@ def setup(person='player'):
         innateToxicology = 7+1
         innateShapeling = 7
         innateZeefaring = 7
-        innateCthonosophy = 6
+        innateChthonosophy = 6
         innateWatchful = 230
         innateDangerous = 236+1+5
         innateShadowy = 230+5
         innatePersuasive = 230
-    elif person=='captain':
+    elif person=='Luckless Captain':
         innateWatchful=50
         innateDangerous=50
         innateZeefaring=3
-    elif person=='breaker':
+    elif person=='Clay Breaker':
         innateWatchful=50
         innateDangerous=70
         innateZeefaring=1
-    elif person=='bathyphile':
+    elif person=='Wily Bathyphile':
         innateWatchful=50
         innateShadowy=50
         innateDangerous=20
         innateZeefaring=5
-    elif person=='mondaine':
+    elif person=='Mild-Mannered Mondaine':
         innateShadowy=50
         innatePersuasive=50
-    elif person=='mole':
+    elif person=='Unilluminated Mole':
         innateShadowy=70
         innatePersuasive=30
         innateChess=1
@@ -79,9 +80,9 @@ def typeAppend(equipment):
 def statIs(equipment, stat):
     if equipment =='innate':
         return {'bizarre':innateBizarre, 'dreaded':innateDreaded, 'respectable':innateRespectable, 'mithridacy':innateMithridacy, 'artisan':innateArtisan,
-                'glasswork':innateGlasswork, 'chess':innateChess, 'anatomy':innateAnatomy, 'kataleptictoxicology':innateToxicology,
-                'shapelingarts':innateShapeling,'persuasive':innatePersuasive,'watchful':innateWatchful,'dangerous':innateDangerous,'shadowy':innateShadowy,
-                'zeefaring':innateZeefaring,'chthonosophy':innateCthonosophy, 'wounds':0,'suspicion':0,'scandal':0,'nightmares':0}[stat]
+                'glasswork':innateGlasswork, 'chess':innateChess, 'anatomy':innateAnatomy, 'katalepticToxicology':innateToxicology,
+                'shapelingArts':innateShapeling,'persuasive':innatePersuasive,'watchful':innateWatchful,'dangerous':innateDangerous,'shadowy':innateShadowy,
+                'zeefaring':innateZeefaring,'chthonosophy':innateChthonosophy, 'wounds':0,'suspicion':0,'scandal':0,'nightmares':0,'inerrant':0,'insubstantial':0,'neathproofed':0}[stat]
     return int(equipment.get(stat,default=0))
 
 def skylineBest(things, attributes, comparisons):
@@ -142,7 +143,7 @@ def optimise(stat, subjectTo, mode='maximum', agent=False):
         currentBest=[0]
     elif mode=='minimum':
         lookingFor = ['<']+['<' if '<' in i else '>' if '>' in i else '==' for i in subjectTo]
-        currentBest=[200]
+        currentBest=[500]
     hats=equipmentFile.findall('.//equipment[@name="Empty"]')
     clothings=equipmentFile.findall('.//equipment[@name="Empty"]')
     gloves=equipmentFile.findall('.//equipment[@name="Empty"]')

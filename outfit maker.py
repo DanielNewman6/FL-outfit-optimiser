@@ -422,7 +422,7 @@ def saveEquipment(slot):
         if j[20].get()!='': equipment.set('inerrant',j[21].get())
         if j[20].get()!='': equipment.set('insubstantial',j[22].get())
         if j[20].get()!='': equipment.set('neathproofed',j[23].get())
-        equipment.set('agentAvail',str(j[24].get()))
+        equipment.set('agentAvail',lower(str(j[24].get())))
     with open('equipmentFile.xml', 'wb') as doc: doc.write(etree.tostring(equipmentFile, pretty_print = True))
 
 def equipmentConfig():
@@ -479,3 +479,4 @@ def equipmentConfig():
 removeButton = Button(main,text='Equipment',command=equipmentConfig).grid(row=0,column=3)
 
 mainloop()
+

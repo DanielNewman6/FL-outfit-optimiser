@@ -220,8 +220,10 @@ def optimise(stat, subjectTo, mode='maximum', agent=False):
         pbar.update(1)
     pbar._tk_window.withdraw()
     print(currentBest)
-    if not agent: tkinter.messagebox.showinfo("Results",  'Total: '+str(currentBest[0])+'\nHat: '+str(currentBest[1])+'\nClothing: '+str(currentBest[2])+'\nAdornment: '+str(currentBest[3])+'\nGloves: '+str(currentBest[4])+'\nWeapon: '+str(currentBest[5])+'\nBoots: '+str(currentBest[6])+'\nLuggage: '+str(currentBest[7])+'\nCompanion: '+str(currentBest[8])+'\nTreasure: '+str(currentBest[9])+'\nTool of the Trade: '+str(currentBest[10])+'\nAffiliation: '+str(currentBest[11])+'\nTransport: '+str(currentBest[12])+'\nHome Comfort: '+str(currentBest[13])+'\nCrew: '+str(currentBest[14]))
-    else: tkinter.messagebox.showinfo("Results",  'Total: '+str(currentBest[0])+'\nHat: '+str(currentBest[1])+'\nClothing: '+str(currentBest[2])+'\nAdornment: '+str(currentBest[3])+'\nGloves: '+str(currentBest[4])+'\nWeapon: '+str(currentBest[5])+'\nBoots: '+str(currentBest[6])+'\nLuggage: '+str(currentBest[7])+'\nCompanion: '+str(currentBest[8])+'\nAffiliation: '+str(currentBest[11])+'\nTransport: '+str(currentBest[12])+'\nHome Comfort: '+str(currentBest[13])+'\nCrew: '+str(currentBest[14]))
+    if len(currentBest)==1:
+        tkinter.messagebox.showerror(title='Error', message='Error: no outfit fitting the constraints given could be found')
+    elif not agent: tkinter.messagebox.showinfo("Results",  'Total: '+str(currentBest[0])+'\nHat: '+str(currentBest[1])+'\nClothing: '+str(currentBest[2])+'\nAdornment: '+str(currentBest[3])+'\nGloves: '+str(currentBest[4])+'\nWeapon: '+str(currentBest[5])+'\nBoots: '+str(currentBest[6])+'\nLuggage: '+str(currentBest[7])+'\nCompanion: '+str(currentBest[8])+'\nTreasure: '+str(currentBest[9])+'\nTool of the Trade: '+str(currentBest[10])+'\nAffiliation: '+str(currentBest[11])+'\nTransport: '+str(currentBest[12])+'\nHome Comfort: '+str(currentBest[13])+'\nCrew: '+str(currentBest[14]))
+    else: tkinter.messagebox.showinfo("Results",  'Total: '+str(currentBest[0])+'\nHat: '+str(currentBest[1])+'\nClothing: '+str(currentBest[2])+'\nAdornment: '+str(currentBest[3])+'\nGloves: '+str(
 
 personOptions = ['Player','Luckless Captain','Clay Breaker','Wily Bathyphile','Mild-Mannered Mondaine','Unilluminated Mole']
 person = StringVar(main)
@@ -479,4 +481,5 @@ def equipmentConfig():
 removeButton = Button(main,text='Equipment',command=equipmentConfig).grid(row=0,column=3)
 
 mainloop()
+
 

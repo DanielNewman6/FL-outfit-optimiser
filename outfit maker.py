@@ -95,7 +95,7 @@ def skylineBest(things, attributes, comparisons):
     while things:
         currMaximal = things.pop(0)
         pos = 0
-        for i in things:
+        for i in things: #go through everything in things. if worse than current maximal, remove it; otherwise it becomes current maximal
             if all([comparisons[j](statIs(currMaximal,attributes[j]),statIs(i,attributes[j])) for j in range(0,len(attributes))]):
                 things.remove(i)
             elif all([comparisons[j](statIs(i,attributes[j]),statIs(currMaximal,attributes[j])) for j in range(0,len(attributes))]):
@@ -103,7 +103,7 @@ def skylineBest(things, attributes, comparisons):
                 pos = things.index(i)
                 things.remove(i)
         maximals+=[currMaximal]
-        for i in things[0:pos]:
+        for i in things: #go through everything in things one last time, removing anything worse that the new maximal
             if all([comparisons[j](statIs(currMaximal,attributes[j]),statIs(i,attributes[j])) for j in range(0,len(attributes))]):
                 things.remove(i)
     return maximals

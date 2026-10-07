@@ -201,10 +201,29 @@ def optimise(stat, subjectTo, mode='maximum', agent=False):
         equipments[i]=filterOut(equipments[i], relevantStats[1:], lookingFor[1:], stat, mode=mode)
     print('After first pass:  '+str(prod(filter1counts)))
     print('After second pass: '+str(prod([len(i) for i in equipments])))
-    st=time.time()
+    start=time.time()
+    while min([1000]+[len(i) for i in equipments[:-1]])<1000:
+        print(len(equipments))
+        slot1 = next((x for x in equipments if len(x) < 1000), None)
+        index1 = equipments.index(slot1)
+        if index1<len(equipments)-2:
+            slot2 = equipments[index1+1]
+            tempXML = etree.ElementTree(etree.fromstring('<root/>'))
+            root=tempXML.getroot()
+            for i in itertools.product(slot1, slot2):
+                partial = etree.SubElement(root, "equipment")
+                partial.set('name',i[0].get('name')+', '+i[1].get('name'))
+                partial.set('type','partial')
+                for j in relevantStats:
+                    partial.set(j, str(int(i[0].get(j) or 0)+int(i[1].get(j) or 0)))
+            equipments[index1] = filterOut(tempXML.findall('.//equipment[@type]'), relevantStats[len(optimiseStats):], lookingFor[len(optimiseStats):], optimiseStats, mode=mode)
+            equipments.remove(slot2)
+        else:
+            break
+    end=time.time()
+    print('After third pass: '+str(prod([len(i) for i in equipments])))
+    print('Third pass duration: '+str(end-start))
     outfits=itertools.product(*equipments)
-    en=time.time()
-    print('Building outfit list: '+str(en-st))
     pbar._tk_window.deiconify()
     pbar.reset(total=prod([len(i) for i in equipments]))
     for fit in outfits:

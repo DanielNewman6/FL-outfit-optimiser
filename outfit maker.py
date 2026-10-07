@@ -8,6 +8,9 @@ import time
 from tkinter import *
 import tkinter.messagebox
 
+def flatten(x):
+    return [a for y in [z if isinstance(z,list) else [z] for z in x] for a in y]
+
 def setup(person='Player'):
     global innateBizarre
     global innateDreaded
@@ -112,18 +115,22 @@ def filterOut(slot, filterBy, directions, sortBy, mode='maximum'):
         if [statIs(i, j) for j in filterBy] not in filterVals:
             filterVals.append([statIs(i, j) for j in filterBy])
     if mode=='maximum':
-        slotPartFiltered = [max([i for i in slot if [statIs(i, k) for k in filterBy]==j], key=lambda i: statIs(i, sortBy)) for j in filterVals]
+        if len(sortBy)>1: raise Exception("Expected sortBy to be one element only")
+        slotPartFiltered = [max([i for i in slot if [statIs(i, k) for k in filterBy]==j], key=lambda i: statIs(i, sortBy[0])) for j in filterVals]
     elif mode=='minimum':
-        slotPartFiltered = [min([i for i in slot if [statIs(i, k) for k in filterBy]==j], key=lambda i: statIs(i, sortBy)) for j in filterVals]
+        if len(sortBy)>1: raise Exception("Expected sortBy to be one element only")
+        slotPartFiltered = [min([i for i in slot if [statIs(i, k) for k in filterBy]==j], key=lambda i: statIs(i, sortBy[0])) for j in filterVals]
+    elif mode=='maximin':
+        slotPartFiltered = slot
     filter1counts+=[len(slotPartFiltered)]
-    return skylineBest(slotPartFiltered, filterBy+[sortBy], [{'>':operator.ge, '<':operator.le, '==':lambda x, y: False}[i] for i in directions]+[{'maximum':operator.ge, 'minimum':operator.le}[mode]])
+    return skylineBest(slotPartFiltered, filterBy+sortBy, flatten([{'>':operator.ge, '<':operator.le, '==':lambda x, y: False}[i] for i in directions]+[{'maximum':operator.ge, 'minimum':operator.le,'maximin':[operator.ge]*len(sortBy)}[mode]]))
 
 main = Tk()
 pbar = tqdm(tk_parent=main)
 pbar._tk_window.withdraw()
 
 #subjectTo of the form ['statVal["respectable"]>=7', 'statVal["bizarre"]==0']
-def optimise(stat, subjectTo, mode='maximum', agent=False):
+def optimise(optimiseStats, subjectTo, mode='maximum', agent=False):
     global hats
     global clothings
     global gloves
@@ -141,7 +148,7 @@ def optimise(stat, subjectTo, mode='maximum', agent=False):
     global luggages
     global equipments
     global filter1counts
-    relevantStats = [stat]
+    relevantStats = [i for i in optimiseStats]
     for i in subjectTo:
         relevantStats.append(statText(i))
     if mode=='maximum':
@@ -150,6 +157,9 @@ def optimise(stat, subjectTo, mode='maximum', agent=False):
     elif mode=='minimum':
         lookingFor = ['<']+['<' if '<' in i else '>' if '>' in i else '==' for i in subjectTo]
         currentBest=[500]
+    elif mode=='maximin':
+        lookingFor = (['>']*len(optimiseStats))+['<' if '<' in i else '>' if '>' in i else '==' for i in subjectTo]
+        currentBest=[0]*len(optimiseStats)
     hats=equipmentFile.findall('.//equipment[@name="Empty"]')
     clothings=equipmentFile.findall('.//equipment[@name="Empty"]')
     gloves=equipmentFile.findall('.//equipment[@name="Empty"]')
@@ -198,7 +208,7 @@ def optimise(stat, subjectTo, mode='maximum', agent=False):
     print('Naive search:      '+str(prod([len(i) for i in equipments])))
     filter1counts=[]
     for i in range(0,len(equipments)):
-        equipments[i]=filterOut(equipments[i], relevantStats[1:], lookingFor[1:], stat, mode=mode)
+        equipments[i]=filterOut(equipments[i], relevantStats[len(optimiseStats):], lookingFor[len(optimiseStats):], optimiseStats, mode=mode)
     print('After first pass:  '+str(prod(filter1counts)))
     print('After second pass: '+str(prod([len(i) for i in equipments])))
     st=time.time()
@@ -212,18 +222,21 @@ def optimise(stat, subjectTo, mode='maximum', agent=False):
         for i in relevantStats:
             statVal[i] = sum([statIs(j, i) for j in fit])+statIs('innate', i)
         if mode=='maximum':
-            if all([eval(j) for j in subjectTo]) and statVal[stat]>currentBest[0]:
-                currentBest = [statVal[stat]]+[j.get('name') for j in fit]
+            if all([eval(j) for j in subjectTo]) and all([statVal[optimiseStats[i]]>currentBest[i] for i in range(0,len(optimiseStats))]):
+                currentBest = [statVal[optimiseStats[0]]]+[j.get('name') for j in fit]
         elif mode=='minimum':
-            if all([eval(j) for j in subjectTo]) and statVal[stat]<currentBest[0]:
-                currentBest = [statVal[stat]]+[j.get('name') for j in fit]
+            if all([eval(j) for j in subjectTo]) and all([statVal[optimiseStats[i]]<currentBest[i] for i in range(0,len(optimiseStats))]):
+                currentBest = [statVal[optimiseStats[0]]]+[j.get('name') for j in fit]
+        elif mode=='maximin':
+            if all([eval(j) for j in subjectTo]) and all([statVal[optimiseStats[i]]>=currentBest[i] for i in range(0,len(optimiseStats))]) and any([statVal[optimiseStats[i]]>currentBest[i] for i in range(0,len(optimiseStats))]):
+                currentBest = [statVal[stat] for stat in optimiseStats]+[j.get('name') for j in fit]
         pbar.update(1)
     pbar._tk_window.withdraw()
     print(currentBest)
     if len(currentBest)==1:
         tkinter.messagebox.showerror(title='Error', message='Error: no outfit fitting the constraints given could be found')
     elif not agent: tkinter.messagebox.showinfo("Results",  'Total: '+str(currentBest[0])+'\nHat: '+str(currentBest[1])+'\nClothing: '+str(currentBest[2])+'\nAdornment: '+str(currentBest[3])+'\nGloves: '+str(currentBest[4])+'\nWeapon: '+str(currentBest[5])+'\nBoots: '+str(currentBest[6])+'\nLuggage: '+str(currentBest[7])+'\nCompanion: '+str(currentBest[8])+'\nTreasure: '+str(currentBest[9])+'\nTool of the Trade: '+str(currentBest[10])+'\nAffiliation: '+str(currentBest[11])+'\nTransport: '+str(currentBest[12])+'\nHome Comfort: '+str(currentBest[13])+'\nCrew: '+str(currentBest[14]))
-    else: tkinter.messagebox.showinfo("Results",  'Total: '+str(currentBest[0])+'\nHat: '+str(currentBest[1])+'\nClothing: '+str(currentBest[2])+'\nAdornment: '+str(currentBest[3])+'\nGloves: '+str(
+    else: tkinter.messagebox.showinfo("Results",  'Total: '+str(currentBest[0])+'\nHat: '+str(currentBest[1])+'\nClothing: '+str(currentBest[2])+'\nAdornment: '+str(currentBest[3])+'\nGloves: '+str(currentBest[4])+'\nWeapon: '+str(currentBest[5])+'\nBoots: '+str(currentBest[6])+'\nLuggage: '+str(currentBest[7])+'\nCompanion: '+str(currentBest[8])+'\nAffiliation: '+str(currentBest[11])+'\nTransport: '+str(currentBest[12])+'\nHome Comfort: '+str(currentBest[13])+'\nCrew: '+str(currentBest[14]))
 
 personOptions = ['Player','Luckless Captain','Clay Breaker','Wily Bathyphile','Mild-Mannered Mondaine','Unilluminated Mole']
 person = StringVar(main)
@@ -271,7 +284,8 @@ def runOptimise():
     setup(person=person.get())
     if person.get()=='Player': agent=False
     else: agent=True
-    optimise(optimised.get(),['statVal["'+i[0].get()+'"]'+i[1].get()+i[2].get() for i in constraints],agent=agent,mode=aim.get())
+    print(str([optimised.get()]))
+    optimise([optimised.get()],['statVal["'+i[0].get()+'"]'+i[1].get()+i[2].get() for i in constraints],agent=agent,mode=aim.get())
 
 optimiseButton = Button(main,text='Run',command=runOptimise,bg='blue',fg='white').grid(row=10,column=0)
 
@@ -479,6 +493,8 @@ def equipmentConfig():
     #print([[i.get() for i in j] for j in variables])
 
 removeButton = Button(main,text='Equipment',command=equipmentConfig).grid(row=0,column=3)
+
+setup()
 
 mainloop()
 

@@ -66,6 +66,20 @@ def setup(person='Player'):
         innateShadowy=70
         innatePersuasive=30
         innateChess=1
+    elif person=='Perforated Zubmariner':
+        innateWatchful=60
+        innateShadowy=10
+        innateZeefaring=2
+    elif person=='Nectared Proprietor':
+        innateWatchful=45
+        innateDangerous=45
+        innatePersuasive=20
+    elif person=='Silent Partner':
+        innateDangerous=60
+        innatePersuasive=60
+        innateGlasswork=2
+    else:
+        print('Error, invalid character')
 
 equipmentFile = etree.parse('equipmentFile.xml')
 
@@ -238,7 +252,7 @@ def optimise(optimiseStats, subjectTo, mode='maximum', agent=False):
     elif not agent: tkinter.messagebox.showinfo("Results",  'Total: '+str(currentBest[0])+'\nHat: '+str(currentBest[1])+'\nClothing: '+str(currentBest[2])+'\nAdornment: '+str(currentBest[3])+'\nGloves: '+str(currentBest[4])+'\nWeapon: '+str(currentBest[5])+'\nBoots: '+str(currentBest[6])+'\nLuggage: '+str(currentBest[7])+'\nCompanion: '+str(currentBest[8])+'\nTreasure: '+str(currentBest[9])+'\nTool of the Trade: '+str(currentBest[10])+'\nAffiliation: '+str(currentBest[11])+'\nTransport: '+str(currentBest[12])+'\nHome Comfort: '+str(currentBest[13])+'\nCrew: '+str(currentBest[14]))
     else: tkinter.messagebox.showinfo("Results",  'Total: '+str(currentBest[0])+'\nHat: '+str(currentBest[1])+'\nClothing: '+str(currentBest[2])+'\nAdornment: '+str(currentBest[3])+'\nGloves: '+str(currentBest[4])+'\nWeapon: '+str(currentBest[5])+'\nBoots: '+str(currentBest[6])+'\nLuggage: '+str(currentBest[7])+'\nCompanion: '+str(currentBest[8])+'\nAffiliation: '+str(currentBest[11])+'\nTransport: '+str(currentBest[12])+'\nHome Comfort: '+str(currentBest[13])+'\nCrew: '+str(currentBest[14]))
 
-personOptions = ['Player','Luckless Captain','Clay Breaker','Wily Bathyphile','Mild-Mannered Mondaine','Unilluminated Mole']
+personOptions = ['Player','Luckless Captain','Clay Breaker','Wily Bathyphile','Mild-Mannered Mondaine','Unilluminated Mole','Perforated Zubmariner','Nectared Proprietor','Silent Partner']
 person = StringVar(main)
 person.set('Player')
 personLabel = Label(main, text='Optimise for: ').grid(column=0,row=0)
